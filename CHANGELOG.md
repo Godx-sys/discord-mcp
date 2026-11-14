@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `set_channel_permissions`: making a channel private (denying `ViewChannel` to @everyone) failed with "Missing Permissions" for any bot without Administrator, because the bot's self-access overwrite also allowed `ManageRoles`, which Discord only lets an Administrator (or a holder of that overwrite) grant. The self-access overwrite no longer includes `ManageRoles`; the bot keeps it from its role.
 - `delete_integration` called `guild.deleteIntegration()`, which doesn't exist in discord.js, so it always failed. It now calls `integration.delete(reason)` (the reason now reaches the audit log too).
+- Member lookup (`get_member`, `assign_role`, `kick_member`, etc.) now finds bots and members who joined after the server started — bots are kept in the member cache, raw user IDs are fetched directly from Discord, and the cache is refreshed once before reporting a member as not found (#3)
 
 ## [2.1.1] - 2026-03-21
 
