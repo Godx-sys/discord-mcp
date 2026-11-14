@@ -1,3 +1,10 @@
+> **This is a fork** of [HardHeadHackerHead/discord-mcp](https://github.com/HardHeadHackerHead/discord-mcp) (QuadsLab, MIT), not affiliated with or endorsed by the original author. It is the 2.1.1 release plus bug fixes, offered upstream too:
+> - private channels work without Administrator (`set_channel_permissions`);
+> - `delete_integration` works;
+> - member tools find bots and members who joined after startup ([upstream PR #2](https://github.com/HardHeadHackerHead/discord-mcp/pull/2) by theoLassauniere).
+>
+> See `CHANGELOG.md` → Unreleased. Run it from a clone (`npm ci && npm run build`, then `node dist/cli.js`); this fork isn't published to npm.
+
 # @quadslab.io/discord-mcp
 
 [![npm version](https://img.shields.io/npm/v/@quadslab.io/discord-mcp)](https://www.npmjs.com/package/@quadslab.io/discord-mcp)
